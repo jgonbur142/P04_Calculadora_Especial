@@ -3,6 +3,8 @@ package app;
 import java.util.ArrayList;
 import java.util.List;
 
+import dominio.ResultadoAnalisis;
+
 /**
  * Clase encargada de analizar la entrada del usuario.
  * Detecta comandos o interpreta operaciones aritméticas (sin prioridad).
