@@ -1,4 +1,4 @@
-package app;
+package dominio;
 
 public class Calculadora {
 
