@@ -1,7 +1,6 @@
 package app;
 
 import java.util.Scanner;
-
 import dominio.Calculadora;
 import dominio.ResultadoAnalisis;
 
@@ -12,6 +11,11 @@ public class GestorCalculadora {
 	private Analizador analizador = new Analizador();
 	private Consola consola = new Consola();
 	
+	/**
+	 * Lee los comandos introducido por el usuario y llama a los métodos correspondientes
+	 * 
+	 * @return void
+	 */
 	public void iniciar() {
 		String entrada;
 		ResultadoAnalisis resultado;
@@ -25,16 +29,13 @@ public class GestorCalculadora {
 				consola.mostrarMensaje("ERROR: debe introducir una operación válida");
 				
 			}else if (resultado.comando() == TipoComando.LIST) {
-				calculadora.getHistorial();
+				consola.mostrarHistorial(calculadora.getHistorial(), calculadora.getUltimoResultado());
 				
 			}else if (resultado.comando() == TipoComando.RESET) {
 				calculadora.resetear();
 				
 			}else if(resultado.comando() == TipoComando.RESULT) {
 				consola.mostrarMensaje("Último resultado: "+calculadora.getUltimoResultado());
-				
-			}else if(resultado.comando() == TipoComando.CALCULO) {
-				consola.mostrarMensaje("Resultado: "+calculadora.realizarOperacion(resultado));
 				
 			}else if (resultado.comando() == TipoComando.QUIT) {
 				salirBucle = true;

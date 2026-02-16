@@ -15,7 +15,7 @@ public class Consola {
 	}
 	
 	public String leerEntrada() {
-		return kb.next();
+		return kb.nextLine();
 	}
 	
 	//imrpimir mensajes de error y resultados
@@ -29,11 +29,11 @@ public class Consola {
 			System.out.println("El historial está vacío");
 		}else {
 			for (int i=0;i<historial.size();i++) { //recorro la lista
-				System.out.printf("%d, %s",i+1,historial.get(i));//.get devuelve el elemento en la posicion i
+				System.out.printf("%d -> %s\n",i+1,historial.get(i));//.get devuelve el elemento en la posicion i
 			}
 		}
 		
-		System.out.println("Último resultado: "+ultimoResultado);
+		System.out.printf("\nÚltimo resultado: %.2f\n\n",ultimoResultado);
 	}
 	
 	

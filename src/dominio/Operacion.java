@@ -14,7 +14,7 @@ public class Operacion {
 	
 	@Override
 	public String toString() {
-		return String.format("%s = %d",entrada,resultado);
+		return String.format("%s = %.2f",entrada,resultado);
 	}
 	
 	
