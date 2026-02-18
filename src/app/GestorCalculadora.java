@@ -1,6 +1,5 @@
 package app;
 
-import java.util.Scanner;
 import dominio.Calculadora;
 import dominio.ResultadoAnalisis;
 

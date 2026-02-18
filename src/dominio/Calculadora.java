@@ -9,17 +9,15 @@ import java.util.List;
 import app.TipoOperador;
 
 //realiza las operaciones y guarda los resultados en el historial
-public class Calculadora {
+public class Calculadora implements ICalculos{
 	
 	private double ultimoResultado;
 	private List<Operacion> historial = new ArrayList<>();
 	
 	/**
-	 * Recorre la lista del analizador y acumular el resultado con un for
-	 * 
-	 * @param ResultadoAnalisis
-	 * @return double
+	 * {inheritDoc}
 	 */
+	@Override
 	public double realizarOperacion(ResultadoAnalisis resultado) {
 		List<Double> numeros = resultado.numeros();
 		List<TipoOperador> operadores = resultado.operadores();
@@ -82,10 +80,9 @@ public class Calculadora {
 	}
 	
 	/**
-	 * Reinicia el ultimo resultado poniéndolo a 0
-	 * 
-	 * @return void
+	 * {inheritDoc}
 	 */
+	@Override
 	public void resetear() {
 		this.ultimoResultado=0;
 	}

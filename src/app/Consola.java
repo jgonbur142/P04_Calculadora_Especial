@@ -5,24 +5,38 @@ import java.util.Scanner;
 
 import dominio.Operacion;
 //comunicación con el usuario
-public class Consola {
+public class Consola implements IEntradaSalida{
 	
 	private Scanner kb = new Scanner(System.in);
 	
-	//enseño el promt de la consola
+	/**
+	 * {inheritDoc}
+	 */
+	@Override
 	public void visualConsola() {
 		System.out.printf("CALCULADORA\n-----------------\n>");
 	}
 	
+	/**
+	 * {inheritDoc}
+	 */
+	@Override
 	public String leerEntrada() {
 		return kb.nextLine();
 	}
 	
-	//imrpimir mensajes de error y resultados
+	/**
+	 * {inheritDoc}
+	 */
+	@Override
 	public void mostrarMensaje(String mensaje) {
 		System.out.println(mensaje);
 	}
 	
+	/**
+	 * {inheritDoc}
+	 */
+	@Override
 	public void mostrarHistorial(List<Operacion> historial, double ultimoResultado) {
 		
 		if (historial.isEmpty()) {
