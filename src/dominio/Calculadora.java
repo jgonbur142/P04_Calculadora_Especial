@@ -14,9 +14,7 @@ public class Calculadora implements ICalculos{
 	private double ultimoResultado;
 	private List<Operacion> historial = new ArrayList<>();
 	
-	/**
-	 * {inheritDoc}
-	 */
+
 	@Override
 	public double realizarOperacion(ResultadoAnalisis resultado) {
 		List<Double> numeros = resultado.numeros();
@@ -79,9 +77,7 @@ public class Calculadora implements ICalculos{
 		}
 	}
 	
-	/**
-	 * {inheritDoc}
-	 */
+
 	@Override
 	public void resetear() {
 		this.ultimoResultado=0;

@@ -9,33 +9,22 @@ public class Consola implements IEntradaSalida{
 	
 	private Scanner kb = new Scanner(System.in);
 	
-	/**
-	 * {inheritDoc}
-	 */
 	@Override
 	public void visualConsola() {
 		System.out.printf("CALCULADORA\n-----------------\n>");
 	}
 	
-	/**
-	 * {inheritDoc}
-	 */
 	@Override
 	public String leerEntrada() {
 		return kb.nextLine();
 	}
 	
-	/**
-	 * {inheritDoc}
-	 */
 	@Override
 	public void mostrarMensaje(String mensaje) {
 		System.out.println(mensaje);
 	}
 	
-	/**
-	 * {inheritDoc}
-	 */
+
 	@Override
 	public void mostrarHistorial(List<Operacion> historial, double ultimoResultado) {
 		
